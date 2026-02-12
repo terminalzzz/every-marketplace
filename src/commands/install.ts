@@ -88,7 +88,8 @@ export default defineCommand({
       if (!bundle) {
         throw new Error(`Target ${targetName} did not return a bundle.`)
       }
-      const primaryOutputRoot = resolveTargetOutputRoot(targetName, outputRoot, codexHome)
+      const hasExplicitOutput = Boolean(args.output && String(args.output).trim())
+      const primaryOutputRoot = resolveTargetOutputRoot(targetName, outputRoot, codexHome, hasExplicitOutput)
       await target.write(primaryOutputRoot, bundle)
       console.log(`Installed ${plugin.manifest.name} to ${primaryOutputRoot}`)
 
@@ -109,7 +110,7 @@ export default defineCommand({
           console.warn(`Skipping ${extra}: no output returned.`)
           continue
         }
-        const extraRoot = resolveTargetOutputRoot(extra, path.join(outputRoot, extra), codexHome)
+        const extraRoot = resolveTargetOutputRoot(extra, path.join(outputRoot, extra), codexHome, hasExplicitOutput)
         await handler.write(extraRoot, extraBundle)
         console.log(`Installed ${plugin.manifest.name} to ${extraRoot}`)
       }
@@ -181,10 +182,13 @@ function resolveOutputRoot(value: unknown): string {
   return path.join(os.homedir(), ".config", "opencode")
 }
 
-function resolveTargetOutputRoot(targetName: string, outputRoot: string, codexHome: string): string {
+function resolveTargetOutputRoot(targetName: string, outputRoot: string, codexHome: string, hasExplicitOutput: boolean): string {
   if (targetName === "codex") return codexHome
   if (targetName === "droid") return path.join(os.homedir(), ".factory")
-  if (targetName === "cursor") return path.join(outputRoot, ".cursor")
+  if (targetName === "cursor") {
+    const base = hasExplicitOutput ? outputRoot : process.cwd()
+    return path.join(base, ".cursor")
+  }
   return outputRoot
 }
 
