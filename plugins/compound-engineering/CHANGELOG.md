@@ -9,6 +9,42 @@ All notable changes to the compound-engineering plugin will be documented in thi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.10.0](https://github.com/terminalzzz/every-marketplace/compare/compound-engineering-v3.9.3...compound-engineering-v3.10.0) (2026-05-29)
+
+
+### Features
+
+* **ce-compound:** add mode:headless for non-interactive use ([#813](https://github.com/terminalzzz/every-marketplace/issues/813)) ([9b45a83](https://github.com/terminalzzz/every-marketplace/commit/9b45a83d7ed2534669656fb3abf6a2c23e2e4f59))
+* **ce-dogfood-beta:** add diff-scoped browser QA dogfood skill ([#848](https://github.com/terminalzzz/every-marketplace/issues/848)) ([0aa6b55](https://github.com/terminalzzz/every-marketplace/commit/0aa6b55a8026728de75aee0ff6ae5a0e006028c5))
+* **ce-plan,ce-brainstorm:** contract-driven sections + optional HTML output ([#826](https://github.com/terminalzzz/every-marketplace/issues/826)) ([11e12e5](https://github.com/terminalzzz/every-marketplace/commit/11e12e5739c6691a2020eb8b70a944587e7f265f))
+* **lfg:** allow model invocation, add CI autofix loop after PR ([#788](https://github.com/terminalzzz/every-marketplace/issues/788)) ([d316971](https://github.com/terminalzzz/every-marketplace/commit/d316971b20d734ab914cb81093c56810c3b14fa7))
+
+
+### Bug Fixes
+
+* **agents:** rename .agent.md to .md for VS Code Copilot tool access ([#846](https://github.com/terminalzzz/every-marketplace/issues/846)) ([796bea7](https://github.com/terminalzzz/every-marketplace/commit/796bea75b74f3b101b53f7cc1c108aece0979e6b))
+* **ce-brainstorm,ce-plan:** add conceptual-diagram affordance to brainstorm docs ([#871](https://github.com/terminalzzz/every-marketplace/issues/871)) ([e5e3fc3](https://github.com/terminalzzz/every-marketplace/commit/e5e3fc3630c026ae0eae6637d8b7a342af862e66))
+* **ce-brainstorm,ce-plan:** restore default-on requirements grouping ([#868](https://github.com/terminalzzz/every-marketplace/issues/868)) ([5c88212](https://github.com/terminalzzz/every-marketplace/commit/5c88212c1fd310d27033e7e8508e782e1f19cfdc))
+* **ce-brainstorm:** scoping synthesis and Q&A interaction cleanup ([#829](https://github.com/terminalzzz/every-marketplace/issues/829)) ([6df3f96](https://github.com/terminalzzz/every-marketplace/commit/6df3f965808a67368d24ddd4816a6bed18df7cdb))
+* **ce-code-review:** replace resolve-base.sh with prose-driven base detection ([#815](https://github.com/terminalzzz/every-marketplace/issues/815)) ([d090bde](https://github.com/terminalzzz/every-marketplace/commit/d090bde0ff1bbc33ec3c3b2049cb4687e9d76532))
+* **ce-coherence-reviewer:** remove Bash from tool allowlist ([#837](https://github.com/terminalzzz/every-marketplace/issues/837)) ([82b8af4](https://github.com/terminalzzz/every-marketplace/commit/82b8af415d9ca5577577fa80da0a6119fc8b661e))
+* **ce-commit-push-pr:** require user-visible bug summaries ([#853](https://github.com/terminalzzz/every-marketplace/issues/853)) ([67d2736](https://github.com/terminalzzz/every-marketplace/commit/67d273622e40a7b28f18c95f65379a36726ca558))
+* **ce-commit-push-pr:** rewrite pr-description around a core principle ([#841](https://github.com/terminalzzz/every-marketplace/issues/841)) ([fd88fd8](https://github.com/terminalzzz/every-marketplace/commit/fd88fd8fd71ccba9d12e9f33a8c1dc99709c6d02))
+* **ce-compound:** drop date suffix from generated doc filenames ([#849](https://github.com/terminalzzz/every-marketplace/issues/849)) ([ac1c6d9](https://github.com/terminalzzz/every-marketplace/commit/ac1c6d9a997d4f8eaba1ba55d8b44500ca393cd4))
+* **ce-debug:** right-size triage and tighten hypothesis discipline ([#796](https://github.com/terminalzzz/every-marketplace/issues/796)) ([6fc57c5](https://github.com/terminalzzz/every-marketplace/commit/6fc57c501f2e4a6978a91b41337026cf25086646))
+* **ce-ideate:** bound scope and add topic-surface decomposition ([#787](https://github.com/terminalzzz/every-marketplace/issues/787)) ([168fad4](https://github.com/terminalzzz/every-marketplace/commit/168fad4ac246b55972b84b7b2a0f1da08a481d7c))
+* **ce-plan:** compress synthesis confirmation to prose + call-outs ([#819](https://github.com/terminalzzz/every-marketplace/issues/819)) ([60c1c93](https://github.com/terminalzzz/every-marketplace/commit/60c1c938d5bbf70abd0af08af3d2c9ede0d1b89d))
+* **ce-plan:** honor explicit external-research requests and route them by intent ([#875](https://github.com/terminalzzz/every-marketplace/issues/875)) ([b3e396d](https://github.com/terminalzzz/every-marketplace/commit/b3e396d0bfd7be0c672cb7193a5cfa40675e6979))
+* **ce-plan:** inline synthesis gate output into SKILL.md ([#822](https://github.com/terminalzzz/every-marketplace/issues/822)) ([39cb9da](https://github.com/terminalzzz/every-marketplace/commit/39cb9da3a1a90a7ce7418f7a64d7ff3c8f9a917c))
+* **ce-proof:** update HITL flow for Proof v2 ([#847](https://github.com/terminalzzz/every-marketplace/issues/847)) ([2a46670](https://github.com/terminalzzz/every-marketplace/commit/2a46670958e8c102ea32cb2c532fb00a5e29f6e4))
+* **ce-resolve-pr-feedback:** paginate GraphQL connections ([#807](https://github.com/terminalzzz/every-marketplace/issues/807)) ([07a6d52](https://github.com/terminalzzz/every-marketplace/commit/07a6d52879ed715e179ff11daaee47e02bc6ecc9))
+* **ce-sessions:** emit repo root path instead of basename subshell ([#873](https://github.com/terminalzzz/every-marketplace/issues/873)) ([253dba8](https://github.com/terminalzzz/every-marketplace/commit/253dba80dd08c111edae3f7fdc8fac998ec0d5cb))
+* **ce-sessions:** unblock session-history on Claude Code ([#800](https://github.com/terminalzzz/every-marketplace/issues/800)) ([81710ef](https://github.com/terminalzzz/every-marketplace/commit/81710efad5666831715a630b04554a35946afb1d))
+* **ce-web-researcher:** use any web tool, not just Claude built-ins ([#836](https://github.com/terminalzzz/every-marketplace/issues/836)) ([6fa1277](https://github.com/terminalzzz/every-marketplace/commit/6fa1277e573b6bec5d94d5b42431b6a4cad5b030))
+* **commit:** auto-create feature branch on default branch ([#856](https://github.com/terminalzzz/every-marketplace/issues/856)) ([26a8025](https://github.com/terminalzzz/every-marketplace/commit/26a802551e44d12b837ac5d3e33fc7ffacbbf354))
+* **html-rendering:** constrain measure and surface execution notes ([#870](https://github.com/terminalzzz/every-marketplace/issues/870)) ([1051132](https://github.com/terminalzzz/every-marketplace/commit/1051132d04153c3045fc4c929cff32882c6934fe))
+* **simplify-code:** guard against over-simplification and behavior drift ([#859](https://github.com/terminalzzz/every-marketplace/issues/859)) ([673dcfa](https://github.com/terminalzzz/every-marketplace/commit/673dcfacb8089476961a0f7d5d1b3a7ac2a84c37))
+
 ## [3.9.3](https://github.com/EveryInc/compound-engineering-plugin/compare/compound-engineering-v3.9.2...compound-engineering-v3.9.3) (2026-05-28)
 
 
